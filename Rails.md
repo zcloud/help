@@ -26,6 +26,16 @@ Generate DB scaffold for Users table with Name and Email columns
 	# destroy a model
 	
 	rails destroy model Foo
+	
+Add a new DB column
+	
+	rails generate migration add_<col_name>_to_<table_name> <column_name>:<type>
+	
+	e.g. rails generate migration add_admin_to_users admin:boolean
+
+	bundle exec rake db:migrate
+	
+	bundle exec rake db:test:prepare
 
 Help
 	
